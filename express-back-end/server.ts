@@ -3,8 +3,9 @@ import express from 'express';
 const app = express();
 const port = 8080;
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
+app.get('/api/data', (req, res) => {
+  const data = { info: "This is the response of the API Call"}
+  res.json(data)
 })
 
 app.listen(port, () => {
